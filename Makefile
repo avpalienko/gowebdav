@@ -14,10 +14,10 @@ test:
 api: .go/bin/godoc2md
 	@sed '/^## API$$/,$$d' -i README.md
 	@echo '## API' >> README.md
-	@$< github.com/studio-b12/gowebdav | sed '/^$$/N;/^\n$$/D' |\
+	@$< github.com/avpalienko/gowebdav | sed '/^$$/N;/^\n$$/D' |\
 	sed '2d' |\
-	sed 's/\/src\/github.com\/studio-b12\/gowebdav\//https:\/\/github.com\/studio-b12\/gowebdav\/blob\/master\//g' |\
-	sed 's/\/src\/target\//https:\/\/github.com\/studio-b12\/gowebdav\/blob\/master\//g' |\
+	sed 's/\/src\/github.com\/avpalienko\/gowebdav\//https:\/\/github.com\/avpalienko\/gowebdav\/blob\/master\//g' |\
+	sed 's/\/src\/target\//https:\/\/github.com\/avpalienko\/gowebdav\/blob\/master\//g' |\
 	sed 's/^#/##/g' >> README.md
 
 check: .go/bin/gocyclo

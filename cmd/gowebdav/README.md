@@ -1,5 +1,5 @@
 # Description
-Command line tool for [gowebdav](https://github.com/studio-b12/gowebdav) library.
+Command line tool for [gowebdav](https://github.com/avpalienko/gowebdav) library.
 
 # Prerequisites
 ## Software
@@ -9,7 +9,7 @@ Command line tool for [gowebdav](https://github.com/studio-b12/gowebdav) library
 
 # Install
 ```sh
-go get -u github.com/studio-b12/gowebdav/cmd/gowebdav
+go get -u github.com/avpalienko/gowebdav/cmd/gowebdav
 ```
 
 # Usage

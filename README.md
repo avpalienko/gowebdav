@@ -1,9 +1,9 @@
 # GoWebDAV
 
-[![Unit Tests Status](https://github.com/studio-b12/gowebdav/actions/workflows/tests.yml/badge.svg)](https://github.com/studio-b12/gowebdav/actions/workflows/tests.yml)
-[![Build Artifacts Status](https://github.com/studio-b12/gowebdav/actions/workflows/artifacts.yml/badge.svg)](https://github.com/studio-b12/gowebdav/actions/workflows/artifacts.yml)
-[![GoDoc](https://godoc.org/github.com/studio-b12/gowebdav?status.svg)](https://godoc.org/github.com/studio-b12/gowebdav)
-[![Go Report Card](https://goreportcard.com/badge/github.com/studio-b12/gowebdav)](https://goreportcard.com/report/github.com/studio-b12/gowebdav)
+[![Unit Tests Status](https://github.com/avpalienko/gowebdav/actions/workflows/tests.yml/badge.svg)](https://github.com/avpalienko/gowebdav/actions/workflows/tests.yml)
+[![Build Artifacts Status](https://github.com/avpalienko/gowebdav/actions/workflows/artifacts.yml/badge.svg)](https://github.com/avpalienko/gowebdav/actions/workflows/artifacts.yml)
+[![GoDoc](https://godoc.org/github.com/avpalienko/gowebdav?status.svg)](https://godoc.org/github.com/avpalienko/gowebdav)
+[![Go Report Card](https://goreportcard.com/badge/github.com/avpalienko/gowebdav)](https://goreportcard.com/report/github.com/avpalienko/gowebdav)
 
 A golang WebDAV client library.
 
@@ -146,10 +146,10 @@ More details about WebDAV server you can read from following resources:
 All contributing are welcome. If you have any suggestions or find some bug - please create an Issue to let us make this project better. We appreciate your help!
 
 ## License
-This library is distributed under the BSD 3-Clause license found in the [LICENSE](https://github.com/studio-b12/gowebdav/blob/master/LICENSE) file.
+This library is distributed under the BSD 3-Clause license found in the [LICENSE](https://github.com/avpalienko/gowebdav/blob/master/LICENSE) file.
 ## API
 
-`import "github.com/studio-b12/gowebdav"`
+`import "github.com/avpalienko/gowebdav"`
 
 * [Overview](#pkg-overview)
 * [Index](#pkg-index)
@@ -223,21 +223,21 @@ included.
 * [PathEscape](#example_PathEscape)
 
 ##### <a name="pkg-files">Package files</a>
-[basicAuth.go](https://github.com/studio-b12/gowebdav/blob/master/basicAuth.go) [client.go](https://github.com/studio-b12/gowebdav/blob/master/client.go) [digestAuth.go](https://github.com/studio-b12/gowebdav/blob/master/digestAuth.go) [doc.go](https://github.com/studio-b12/gowebdav/blob/master/doc.go) [errors.go](https://github.com/studio-b12/gowebdav/blob/master/errors.go) [file.go](https://github.com/studio-b12/gowebdav/blob/master/file.go) [netrc.go](https://github.com/studio-b12/gowebdav/blob/master/netrc.go) [requests.go](https://github.com/studio-b12/gowebdav/blob/master/requests.go) [utils.go](https://github.com/studio-b12/gowebdav/blob/master/utils.go) 
+[basicAuth.go](https://github.com/avpalienko/gowebdav/blob/master/basicAuth.go) [client.go](https://github.com/avpalienko/gowebdav/blob/master/client.go) [digestAuth.go](https://github.com/avpalienko/gowebdav/blob/master/digestAuth.go) [doc.go](https://github.com/avpalienko/gowebdav/blob/master/doc.go) [errors.go](https://github.com/avpalienko/gowebdav/blob/master/errors.go) [file.go](https://github.com/avpalienko/gowebdav/blob/master/file.go) [netrc.go](https://github.com/avpalienko/gowebdav/blob/master/netrc.go) [requests.go](https://github.com/avpalienko/gowebdav/blob/master/requests.go) [utils.go](https://github.com/avpalienko/gowebdav/blob/master/utils.go) 
 
-### <a name="FixSlash">func</a> [FixSlash](https://github.com/studio-b12/gowebdav/blob/master/utils.go?s=354:384#L23)
+### <a name="FixSlash">func</a> [FixSlash](https://github.com/avpalienko/gowebdav/blob/master/utils.go?s=354:384#L23)
 ``` go
 func FixSlash(s string) string
 ```
 FixSlash appends a trailing / to our string
 
-### <a name="FixSlashes">func</a> [FixSlashes](https://github.com/studio-b12/gowebdav/blob/master/utils.go?s=506:538#L31)
+### <a name="FixSlashes">func</a> [FixSlashes](https://github.com/avpalienko/gowebdav/blob/master/utils.go?s=506:538#L31)
 ``` go
 func FixSlashes(s string) string
 ```
 FixSlashes appends and prepends a / if they are missing
 
-### <a name="IsErrCode">func</a> [IsErrCode](https://github.com/studio-b12/gowebdav/blob/master/errors.go?s=355:395#L21)
+### <a name="IsErrCode">func</a> [IsErrCode](https://github.com/avpalienko/gowebdav/blob/master/errors.go?s=355:395#L21)
 ``` go
 func IsErrCode(err error, code int) bool
 ```
@@ -245,39 +245,39 @@ IsErrCode returns true if the given error
 is an os.PathError wrapping a StatusError
 with the given status code.
 
-### <a name="IsErrNotFound">func</a> [IsErrNotFound](https://github.com/studio-b12/gowebdav/blob/master/errors.go?s=587:621#L31)
+### <a name="IsErrNotFound">func</a> [IsErrNotFound](https://github.com/avpalienko/gowebdav/blob/master/errors.go?s=587:621#L31)
 ``` go
 func IsErrNotFound(err error) bool
 ```
 IsErrNotFound is shorthand for IsErrCode
 for status 404.
 
-### <a name="Join">func</a> [Join](https://github.com/studio-b12/gowebdav/blob/master/utils.go?s=639:683#L40)
+### <a name="Join">func</a> [Join](https://github.com/avpalienko/gowebdav/blob/master/utils.go?s=639:683#L40)
 ``` go
 func Join(path0 string, path1 string) string
 ```
 Join joins two paths
 
-### <a name="PathEscape">func</a> [PathEscape](https://github.com/studio-b12/gowebdav/blob/master/utils.go?s=153:188#L14)
+### <a name="PathEscape">func</a> [PathEscape](https://github.com/avpalienko/gowebdav/blob/master/utils.go?s=153:188#L14)
 ``` go
 func PathEscape(path string) string
 ```
 PathEscape escapes all segments of a given path
 
-### <a name="ReadConfig">func</a> [ReadConfig](https://github.com/studio-b12/gowebdav/blob/master/netrc.go?s=428:479#L27)
+### <a name="ReadConfig">func</a> [ReadConfig](https://github.com/avpalienko/gowebdav/blob/master/netrc.go?s=428:479#L27)
 ``` go
 func ReadConfig(uri, netrc string) (string, string)
 ```
 ReadConfig reads login and password configuration from ~/.netrc
 machine foo.com login username password 123456
 
-### <a name="String">func</a> [String](https://github.com/studio-b12/gowebdav/blob/master/utils.go?s=813:844#L45)
+### <a name="String">func</a> [String](https://github.com/avpalienko/gowebdav/blob/master/utils.go?s=813:844#L45)
 ``` go
 func String(r io.Reader) string
 ```
 String pulls a string out of our io.Reader
 
-### <a name="Authenticator">type</a> [Authenticator](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=388:507#L29)
+### <a name="Authenticator">type</a> [Authenticator](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=388:507#L29)
 ``` go
 type Authenticator interface {
     Type() string
@@ -288,7 +288,7 @@ type Authenticator interface {
 ```
 Authenticator stub
 
-### <a name="BasicAuth">type</a> [BasicAuth](https://github.com/studio-b12/gowebdav/blob/master/basicAuth.go?s=106:157#L9)
+### <a name="BasicAuth">type</a> [BasicAuth](https://github.com/avpalienko/gowebdav/blob/master/basicAuth.go?s=106:157#L9)
 ``` go
 type BasicAuth struct {
     // contains filtered or unexported fields
@@ -297,31 +297,31 @@ type BasicAuth struct {
 ```
 BasicAuth structure holds our credentials
 
-#### <a name="BasicAuth.Authorize">func</a> (\*BasicAuth) [Authorize](https://github.com/studio-b12/gowebdav/blob/master/basicAuth.go?s=473:549#L30)
+#### <a name="BasicAuth.Authorize">func</a> (\*BasicAuth) [Authorize](https://github.com/avpalienko/gowebdav/blob/master/basicAuth.go?s=473:549#L30)
 ``` go
 func (b *BasicAuth) Authorize(req *http.Request, method string, path string)
 ```
 Authorize the current request
 
-#### <a name="BasicAuth.Pass">func</a> (\*BasicAuth) [Pass](https://github.com/studio-b12/gowebdav/blob/master/basicAuth.go?s=388:421#L25)
+#### <a name="BasicAuth.Pass">func</a> (\*BasicAuth) [Pass](https://github.com/avpalienko/gowebdav/blob/master/basicAuth.go?s=388:421#L25)
 ``` go
 func (b *BasicAuth) Pass() string
 ```
 Pass holds the BasicAuth password
 
-#### <a name="BasicAuth.Type">func</a> (\*BasicAuth) [Type](https://github.com/studio-b12/gowebdav/blob/master/basicAuth.go?s=201:234#L15)
+#### <a name="BasicAuth.Type">func</a> (\*BasicAuth) [Type](https://github.com/avpalienko/gowebdav/blob/master/basicAuth.go?s=201:234#L15)
 ``` go
 func (b *BasicAuth) Type() string
 ```
 Type identifies the BasicAuthenticator
 
-#### <a name="BasicAuth.User">func</a> (\*BasicAuth) [User](https://github.com/studio-b12/gowebdav/blob/master/basicAuth.go?s=297:330#L20)
+#### <a name="BasicAuth.User">func</a> (\*BasicAuth) [User](https://github.com/avpalienko/gowebdav/blob/master/basicAuth.go?s=297:330#L20)
 ``` go
 func (b *BasicAuth) User() string
 ```
 User holds the BasicAuth username
 
-### <a name="Client">type</a> [Client](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=172:364#L18)
+### <a name="Client">type</a> [Client](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=172:364#L18)
 ``` go
 type Client struct {
     // contains filtered or unexported fields
@@ -330,55 +330,55 @@ type Client struct {
 ```
 Client defines our structure
 
-#### <a name="NewClient">func</a> [NewClient](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=1019:1063#L62)
+#### <a name="NewClient">func</a> [NewClient](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=1019:1063#L62)
 ``` go
 func NewClient(uri, user, pw string) *Client
 ```
 NewClient creates a new instance of client
 
-#### <a name="Client.Connect">func</a> (\*Client) [Connect](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=1843:1875#L87)
+#### <a name="Client.Connect">func</a> (\*Client) [Connect](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=1843:1875#L87)
 ``` go
 func (c *Client) Connect() error
 ```
 Connect connects to our dav server
 
-#### <a name="Client.Copy">func</a> (\*Client) [Copy](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=6818:6886#L323)
+#### <a name="Client.Copy">func</a> (\*Client) [Copy](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=6818:6886#L323)
 ``` go
 func (c *Client) Copy(oldpath, newpath string, overwrite bool) error
 ```
 Copy copies a file from A to B
 
-#### <a name="Client.Mkdir">func</a> (\*Client) [Mkdir](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=5793:5855#L272)
+#### <a name="Client.Mkdir">func</a> (\*Client) [Mkdir](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=5793:5855#L272)
 ``` go
 func (c *Client) Mkdir(path string, _ os.FileMode) (err error)
 ```
 Mkdir makes a directory
 
-#### <a name="Client.MkdirAll">func</a> (\*Client) [MkdirAll](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=6068:6133#L286)
+#### <a name="Client.MkdirAll">func</a> (\*Client) [MkdirAll](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=6068:6133#L286)
 ``` go
 func (c *Client) MkdirAll(path string, _ os.FileMode) (err error)
 ```
 MkdirAll like mkdir -p, but for webdav
 
-#### <a name="Client.Read">func</a> (\*Client) [Read](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=6992:7042#L328)
+#### <a name="Client.Read">func</a> (\*Client) [Read](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=6992:7042#L328)
 ``` go
 func (c *Client) Read(path string) ([]byte, error)
 ```
 Read reads the contents of a remote file
 
-#### <a name="Client.ReadDir">func</a> (\*Client) [ReadDir](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=2869:2929#L130)
+#### <a name="Client.ReadDir">func</a> (\*Client) [ReadDir](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=2869:2929#L130)
 ``` go
 func (c *Client) ReadDir(path string) ([]os.FileInfo, error)
 ```
 ReadDir reads the contents of a remote directory
 
-#### <a name="Client.ReadStream">func</a> (\*Client) [ReadStream](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=7353:7416#L346)
+#### <a name="Client.ReadStream">func</a> (\*Client) [ReadStream](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=7353:7416#L346)
 ``` go
 func (c *Client) ReadStream(path string) (io.ReadCloser, error)
 ```
 ReadStream reads the stream for a given path
 
-#### <a name="Client.ReadStreamRange">func</a> (\*Client) [ReadStreamRange](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=8165:8255#L368)
+#### <a name="Client.ReadStreamRange">func</a> (\*Client) [ReadStreamRange](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=8165:8255#L368)
 ``` go
 func (c *Client) ReadStreamRange(path string, offset, length int64) (io.ReadCloser, error)
 ```
@@ -391,67 +391,67 @@ If the server does not support partial content requests and returns full content
 this function will emulate the behavior by skipping `offset` bytes and limiting the result
 to `length`.
 
-#### <a name="Client.Remove">func</a> (\*Client) [Remove](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=5299:5341#L249)
+#### <a name="Client.Remove">func</a> (\*Client) [Remove](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=5299:5341#L249)
 ``` go
 func (c *Client) Remove(path string) error
 ```
 Remove removes a remote file
 
-#### <a name="Client.RemoveAll">func</a> (\*Client) [RemoveAll](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=5407:5452#L254)
+#### <a name="Client.RemoveAll">func</a> (\*Client) [RemoveAll](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=5407:5452#L254)
 ``` go
 func (c *Client) RemoveAll(path string) error
 ```
 RemoveAll removes remote files
 
-#### <a name="Client.Rename">func</a> (\*Client) [Rename](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=6652:6722#L318)
+#### <a name="Client.Rename">func</a> (\*Client) [Rename](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=6652:6722#L318)
 ``` go
 func (c *Client) Rename(oldpath, newpath string, overwrite bool) error
 ```
 Rename moves a file from A to B
 
-#### <a name="Client.SetHeader">func</a> (\*Client) [SetHeader](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=1235:1280#L67)
+#### <a name="Client.SetHeader">func</a> (\*Client) [SetHeader](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=1235:1280#L67)
 ``` go
 func (c *Client) SetHeader(key, value string)
 ```
 SetHeader lets us set arbitrary headers for a given client
 
-#### <a name="Client.SetInterceptor">func</a> (\*Client) [SetInterceptor](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=1387:1469#L72)
+#### <a name="Client.SetInterceptor">func</a> (\*Client) [SetInterceptor](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=1387:1469#L72)
 ``` go
 func (c *Client) SetInterceptor(interceptor func(method string, rq *http.Request))
 ```
 SetInterceptor lets us set an arbitrary interceptor for a given client
 
-#### <a name="Client.SetTimeout">func</a> (\*Client) [SetTimeout](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=1571:1621#L77)
+#### <a name="Client.SetTimeout">func</a> (\*Client) [SetTimeout](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=1571:1621#L77)
 ``` go
 func (c *Client) SetTimeout(timeout time.Duration)
 ```
 SetTimeout exposes the ability to set a time limit for requests
 
-#### <a name="Client.SetTransport">func</a> (\*Client) [SetTransport](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=1714:1772#L82)
+#### <a name="Client.SetTransport">func</a> (\*Client) [SetTransport](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=1714:1772#L82)
 ``` go
 func (c *Client) SetTransport(transport http.RoundTripper)
 ```
 SetTransport exposes the ability to define custom transports
 
-#### <a name="Client.Stat">func</a> (\*Client) [Stat](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=4255:4310#L197)
+#### <a name="Client.Stat">func</a> (\*Client) [Stat](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=4255:4310#L197)
 ``` go
 func (c *Client) Stat(path string) (os.FileInfo, error)
 ```
 Stat returns the file stats for a specified path
 
-#### <a name="Client.Write">func</a> (\*Client) [Write](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=9260:9335#L402)
+#### <a name="Client.Write">func</a> (\*Client) [Write](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=9260:9335#L402)
 ``` go
 func (c *Client) Write(path string, data []byte, _ os.FileMode) (err error)
 ```
 Write writes data to a given path
 
-#### <a name="Client.WriteStream">func</a> (\*Client) [WriteStream](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=9759:9845#L432)
+#### <a name="Client.WriteStream">func</a> (\*Client) [WriteStream](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=9759:9845#L432)
 ``` go
 func (c *Client) WriteStream(path string, stream io.Reader, _ os.FileMode) (err error)
 ```
 WriteStream writes a stream
 
-### <a name="DigestAuth">type</a> [DigestAuth](https://github.com/studio-b12/gowebdav/blob/master/digestAuth.go?s=157:254#L14)
+### <a name="DigestAuth">type</a> [DigestAuth](https://github.com/avpalienko/gowebdav/blob/master/digestAuth.go?s=157:254#L14)
 ``` go
 type DigestAuth struct {
     // contains filtered or unexported fields
@@ -460,31 +460,31 @@ type DigestAuth struct {
 ```
 DigestAuth structure holds our credentials
 
-#### <a name="DigestAuth.Authorize">func</a> (\*DigestAuth) [Authorize](https://github.com/studio-b12/gowebdav/blob/master/digestAuth.go?s=577:654#L36)
+#### <a name="DigestAuth.Authorize">func</a> (\*DigestAuth) [Authorize](https://github.com/avpalienko/gowebdav/blob/master/digestAuth.go?s=577:654#L36)
 ``` go
 func (d *DigestAuth) Authorize(req *http.Request, method string, path string)
 ```
 Authorize the current request
 
-#### <a name="DigestAuth.Pass">func</a> (\*DigestAuth) [Pass](https://github.com/studio-b12/gowebdav/blob/master/digestAuth.go?s=491:525#L31)
+#### <a name="DigestAuth.Pass">func</a> (\*DigestAuth) [Pass](https://github.com/avpalienko/gowebdav/blob/master/digestAuth.go?s=491:525#L31)
 ``` go
 func (d *DigestAuth) Pass() string
 ```
 Pass holds the DigestAuth password
 
-#### <a name="DigestAuth.Type">func</a> (\*DigestAuth) [Type](https://github.com/studio-b12/gowebdav/blob/master/digestAuth.go?s=299:333#L21)
+#### <a name="DigestAuth.Type">func</a> (\*DigestAuth) [Type](https://github.com/avpalienko/gowebdav/blob/master/digestAuth.go?s=299:333#L21)
 ``` go
 func (d *DigestAuth) Type() string
 ```
 Type identifies the DigestAuthenticator
 
-#### <a name="DigestAuth.User">func</a> (\*DigestAuth) [User](https://github.com/studio-b12/gowebdav/blob/master/digestAuth.go?s=398:432#L26)
+#### <a name="DigestAuth.User">func</a> (\*DigestAuth) [User](https://github.com/avpalienko/gowebdav/blob/master/digestAuth.go?s=398:432#L26)
 ``` go
 func (d *DigestAuth) User() string
 ```
 User holds the DigestAuth username
 
-### <a name="File">type</a> [File](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=93:253#L10)
+### <a name="File">type</a> [File](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=93:253#L10)
 ``` go
 type File struct {
     // contains filtered or unexported fields
@@ -493,67 +493,67 @@ type File struct {
 ```
 File is our structure for a given file
 
-#### <a name="File.ContentType">func</a> (File) [ContentType](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=476:510#L31)
+#### <a name="File.ContentType">func</a> (File) [ContentType](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=476:510#L31)
 ``` go
 func (f File) ContentType() string
 ```
 ContentType returns the content type of a file
 
-#### <a name="File.ETag">func</a> (File) [ETag](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=929:956#L56)
+#### <a name="File.ETag">func</a> (File) [ETag](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=929:956#L56)
 ``` go
 func (f File) ETag() string
 ```
 ETag returns the ETag of a file
 
-#### <a name="File.IsDir">func</a> (File) [IsDir](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=1035:1061#L61)
+#### <a name="File.IsDir">func</a> (File) [IsDir](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=1035:1061#L61)
 ``` go
 func (f File) IsDir() bool
 ```
 IsDir let us see if a given file is a directory or not
 
-#### <a name="File.ModTime">func</a> (File) [ModTime](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=836:869#L51)
+#### <a name="File.ModTime">func</a> (File) [ModTime](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=836:869#L51)
 ``` go
 func (f File) ModTime() time.Time
 ```
 ModTime returns the modified time of a file
 
-#### <a name="File.Mode">func</a> (File) [Mode](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=665:697#L41)
+#### <a name="File.Mode">func</a> (File) [Mode](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=665:697#L41)
 ``` go
 func (f File) Mode() os.FileMode
 ```
 Mode will return the mode of a given file
 
-#### <a name="File.Name">func</a> (File) [Name](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=378:405#L26)
+#### <a name="File.Name">func</a> (File) [Name](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=378:405#L26)
 ``` go
 func (f File) Name() string
 ```
 Name returns the name of a file
 
-#### <a name="File.Path">func</a> (File) [Path](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=295:322#L21)
+#### <a name="File.Path">func</a> (File) [Path](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=295:322#L21)
 ``` go
 func (f File) Path() string
 ```
 Path returns the full path of a file
 
-#### <a name="File.Size">func</a> (File) [Size](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=573:599#L36)
+#### <a name="File.Size">func</a> (File) [Size](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=573:599#L36)
 ``` go
 func (f File) Size() int64
 ```
 Size returns the size of a file
 
-#### <a name="File.String">func</a> (File) [String](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=1183:1212#L71)
+#### <a name="File.String">func</a> (File) [String](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=1183:1212#L71)
 ``` go
 func (f File) String() string
 ```
 String lets us see file information
 
-#### <a name="File.Sys">func</a> (File) [Sys](https://github.com/studio-b12/gowebdav/blob/master/file.go?s=1095:1126#L66)
+#### <a name="File.Sys">func</a> (File) [Sys](https://github.com/avpalienko/gowebdav/blob/master/file.go?s=1095:1126#L66)
 ``` go
 func (f File) Sys() interface{}
 ```
 Sys ????
 
-### <a name="NoAuth">type</a> [NoAuth](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=551:599#L37)
+### <a name="NoAuth">type</a> [NoAuth](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=551:599#L37)
 ``` go
 type NoAuth struct {
     // contains filtered or unexported fields
@@ -562,31 +562,31 @@ type NoAuth struct {
 ```
 NoAuth structure holds our credentials
 
-#### <a name="NoAuth.Authorize">func</a> (\*NoAuth) [Authorize](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=894:967#L58)
+#### <a name="NoAuth.Authorize">func</a> (\*NoAuth) [Authorize](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=894:967#L58)
 ``` go
 func (n *NoAuth) Authorize(req *http.Request, method string, path string)
 ```
 Authorize the current request
 
-#### <a name="NoAuth.Pass">func</a> (\*NoAuth) [Pass](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=812:842#L53)
+#### <a name="NoAuth.Pass">func</a> (\*NoAuth) [Pass](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=812:842#L53)
 ``` go
 func (n *NoAuth) Pass() string
 ```
 Pass returns the current password
 
-#### <a name="NoAuth.Type">func</a> (\*NoAuth) [Type](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=638:668#L43)
+#### <a name="NoAuth.Type">func</a> (\*NoAuth) [Type](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=638:668#L43)
 ``` go
 func (n *NoAuth) Type() string
 ```
 Type identifies the authenticator
 
-#### <a name="NoAuth.User">func</a> (\*NoAuth) [User](https://github.com/studio-b12/gowebdav/blob/master/client.go?s=724:754#L48)
+#### <a name="NoAuth.User">func</a> (\*NoAuth) [User](https://github.com/avpalienko/gowebdav/blob/master/client.go?s=724:754#L48)
 ``` go
 func (n *NoAuth) User() string
 ```
 User returns the current user
 
-### <a name="StatusError">type</a> [StatusError](https://github.com/studio-b12/gowebdav/blob/master/errors.go?s=114:153#L10)
+### <a name="StatusError">type</a> [StatusError](https://github.com/avpalienko/gowebdav/blob/master/errors.go?s=114:153#L10)
 ``` go
 type StatusError struct {
     Status int
@@ -596,7 +596,7 @@ type StatusError struct {
 StatusError implements error and wraps
 an erroneous status code.
 
-#### <a name="StatusError.Error">func</a> (StatusError) [Error](https://github.com/studio-b12/gowebdav/blob/master/errors.go?s=155:191#L14)
+#### <a name="StatusError.Error">func</a> (StatusError) [Error](https://github.com/avpalienko/gowebdav/blob/master/errors.go?s=155:191#L14)
 ``` go
 func (se StatusError) Error() string
 ```
