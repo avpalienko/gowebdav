@@ -250,6 +250,11 @@ func (c *Client) Stat(path string) (os.FileInfo, error) {
 	return f, err
 }
 
+func (c *Client) FindProps(path string, ns string, propsList []string,  resp interface{}, parse func(resp interface{}) error) error {
+	req := fmt.Sprintf("<d:propfind xmlns:d='DAV:' %s ><d:prop><%s/></d:prop></d:propfind>", ns, strings.Join(propsList, "/><"))
+	return c.propfind(path, true, req, resp, parse)
+}
+
 // Remove removes a remote file
 func (c *Client) Remove(path string) error {
 	return c.RemoveAll(path)
