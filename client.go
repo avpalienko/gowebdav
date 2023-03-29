@@ -255,6 +255,15 @@ func (c *Client) FindProps(path string, ns string, propsList []string,  resp int
 	return c.propfind(path, true, req, resp, parse)
 }
 
+func (c *Client) PatchProps(path string, ns string, props interface{} ) error {
+	body, err := xml.Marshal(props)
+	if err!= nil {
+		return err
+	}
+	req := fmt.Sprintf("<d:propertyupdate xmlns:d='DAV:' %s ><d:set><d:prop>%s</d:prop></d:set></d:propertyupdate>", ns, string(body))
+	return c.proppatch (path, true, req)
+}
+
 // Remove removes a remote file
 func (c *Client) Remove(path string) error {
 	return c.RemoveAll(path)
