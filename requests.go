@@ -13,6 +13,7 @@ func (c *Client) req(method, path string, body io.Reader, intercept func(*http.R
 	var r *http.Request
 	var retryBuf io.Reader
 
+	contentLength := int64(0)
 	if body != nil {
 		// If the authorization fails, we will need to restart reading
 		// from the passed body stream.
@@ -21,6 +22,9 @@ func (c *Client) req(method, path string, body io.Reader, intercept func(*http.R
 		// Otherwise, copy the stream into a buffer while uploading
 		// and use the buffers content on retry.
 		if sk, ok := body.(io.Seeker); ok {
+			if contentLength, err = sk.Seek(0, io.SeekEnd); err != nil {
+				return
+			}
 			if _, err = sk.Seek(0, io.SeekStart); err != nil {
 				return
 			}
@@ -43,6 +47,9 @@ func (c *Client) req(method, path string, body io.Reader, intercept func(*http.R
 		for _, v := range vals {
 			r.Header.Add(k, v)
 		}
+	}
+	if contentLength > 0 && r.ContentLength == 0 {
+		r.ContentLength = contentLength
 	}
 
 	// make sure we read 'c.auth' only once since it will be substituted below
